@@ -1,2 +1,1 @@
-# Local-Welcome-react
-Final Group Project
+# Final group project local welcome (codeyourfuture) 
