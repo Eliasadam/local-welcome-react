@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import TableSetup from '../TableSetup';
 import RecipePreparation from '../RecipePreparation';
-import CleanigUp from '../CleaningUp';
+import CleaningUp from '../CleaningUp';
 export default class DashboardPage extends Component {
   state = {
     mainStep: 0,
   };
-  setSetpTo1 = () => this.setState({ mainStep: 1 });
-  setSetpTo2 = () => this.setState({ mainStep: 2 });
-  setSetpTo3 = () => this.setState({ mainStep: 3 });
+  setStepTo1 = () => this.setState({ mainStep: 1 });
+  setStepTo2 = () => this.setState({ mainStep: 2 });
+  setStepTo3 = () => this.setState({ mainStep: 3 });
   currentComponent = step => {
     switch (this.state.mainStep) {
       case 1:
@@ -16,7 +16,7 @@ export default class DashboardPage extends Component {
       case 2:
         return <RecipePreparation />;
       case 3:
-        return <CleanigUp />;
+        return <CleaningUp />;
       default:
         return <h1> We are ready to get started ... Say something </h1>;
     }
@@ -26,12 +26,12 @@ export default class DashboardPage extends Component {
       <div>
         <h1>Welcome to Cook and Eat Ritual!</h1>
         {this.currentComponent(this.state.mainStep)}
-        <button onClick={this.setSetpTo1}> Table setup startign... </button>
-        <button onClick={this.setSetpTo2}>
+        <button onClick={this.setStepTo1}> Table setup startingn... </button>
+        <button onClick={this.setStepTo2}>
           {' '}
-          Recipe preparation startign...{' '}
+          Recipe preparation startingn...{' '}
         </button>
-        <button onClick={this.setSetpTo3}> Cleanig up startign...</button>
+        <button onClick={this.setStepTo3}> Cleaning up startingn...</button>
       </div>
     );
   }
