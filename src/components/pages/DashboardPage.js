@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 import TableSetup from '../TableSetup';
 import RecipePreparation from '../RecipePreparation';
 import CleaningUp from '../CleaningUp';
@@ -26,12 +27,27 @@ export default class DashboardPage extends Component {
       <div>
         <h1>Welcome to Cook and Eat Ritual!</h1>
         {this.currentComponent(this.state.mainStep)}
-        <button onClick={this.setStepTo1}> Table setup startingn... </button>
-        <button onClick={this.setStepTo2}>
+        <Button
+          color="primary"
+          onClick={this.setStepTo1}
+          className={this.state.mainStep === 1 ? 'active-class' : null}
+        >
+          {' '}
+          Table setup startingn...{' '}
+        </Button>
+        <Button
+          onClick={this.setStepTo2}
+          className={this.state.mainStep === 2 ? 'active-class' : null}
+        >
           {' '}
           Recipe preparation startingn...{' '}
-        </button>
-        <button onClick={this.setStepTo3}> Cleaning up startingn...</button>
+        </Button>
+        <Button
+          onClick={this.setStepTo3}
+          className={this.state.mainStep === 3 ? 'active-class' : null}
+        >
+          Cleaning up startingn...
+        </Button>
       </div>
     );
   }
