@@ -4,8 +4,9 @@ const TableSettingPagination = (props)=>{
     
       return data.map((item,index) =>
           <div>
-              <button onClick={()=>props.setCurrentStep(index)} value={item.id}>{item.id}</button>
+              <button onClick={()=>props.setCurrentStep(index+1)} value={item.id}>{item.id}</button>
           </div>
+        
        )
     
 }
