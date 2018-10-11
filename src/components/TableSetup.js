@@ -25,7 +25,10 @@ class TableSetup extends Component {
     return (
       <div>
         <h2>Welcome to Table setup</h2>
-        <TableSettingPagination setCurrentStep={this.setCurrentStep} />
+        <TableSettingPagination
+          currentStep={this.state.currentStep}
+          setCurrentStep={this.setCurrentStep}
+        />
 
         <div>
           <img src={filteredItem[0].url} alt={filteredItem[0].title} />
