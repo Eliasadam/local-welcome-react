@@ -22,6 +22,38 @@
 .App-link {
   color: #61dafb;
 }
+.pagination-button {
+   display:inline;
+   margin:2px;
+}
+.button-container{
+   display: inline;
+}
+
+.next-container{
+  display: inline-block;
+  width: 15%;
+}
+.previous-button {
+   width: 80%;
+}
+
+.image-container{
+  display:  inline-block;
+  width: 70%;
+}
+
+
+
+.next-button {
+   width: 80%;
+}
+
+.previous-container{
+  display:  inline-block;
+  width: 15%;
+} 
+
 
 @keyframes App-logo-spin {
   from {

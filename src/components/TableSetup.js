@@ -1,35 +1,47 @@
 import React, { Component } from 'react';
+//import { Fade } from 'reactstrap';
 import data from '../data/tableSetting.json';
 import TableSettingPagination from './TableSettingPagination.js'
 import NextPreviousButtons from './NextPreviousButtons.js'
+import Previous from './Previous.js';
 class  TableSetup extends Component {
   constructor(props){
     super(props)
     this.state={
-      currentStep: 1
+      currentStep: 1,
+      fadeIn: true ,
+      appear: false
     }
   }
    setCurrentStep=(index)=>{
      console.log(index);
     //let n = this.state.currentStep;
      this.setState({
-        currentStep:index
- 
+        currentStep:index,
+        appear:!this.state.appear,
+        fadeIn:this.state.fadeIn,
+  
+    
+
+       
      })
    }
 
    handleNextClick=(index)=>{
-    let currentIndex = index<data.length?(index+1):(index=1)
+    let currentIndex = index<data.length?(index+1):(index=data.length)
+    console.log(currentIndex)
      this.setState({
-       currentStep : currentIndex
+       currentStep : currentIndex,
+       
      })
    }
 
    handlePreviousClick=(index)=>{
     let currentIndex = index>1?(index-1):(index=1)
-    console.log(currentIndex)
+    //console.log(currentIndex)
     this.setState({
-      currentStep : currentIndex
+      currentStep : currentIndex,
+   
     })
   }
   render() {
@@ -39,13 +51,22 @@ class  TableSetup extends Component {
     return (
        <div>
         <h2>Welcome to Table setup</h2>
-        <TableSettingPagination setCurrentStep={this.setCurrentStep}/>  
-        <NextPreviousButtons handleNextClick={this.handleNextClick} currentStep={this.state.currentStep} handlePreviousClick={this.handlePreviousClick}/>
-              <div>
-                 <img src={filteredItem[0].url} alt={filteredItem[0].title}/>
-                 <h1>{filteredItem[0].title}</h1>
+        <div class="button-container">
+            <TableSettingPagination setCurrentStep={this.setCurrentStep}/>  
+        </div>
+        <div className="middle">
+          <NextPreviousButtons handleNextClick={this.handleNextClick} currentStep={this.state.currentStep}/>
+          
+              <div className='image-container'>
+                 <img className="picture" src={filteredItem[0].url} alt={filteredItem[0].title}/>
+                 
               </div>
-              
+
+           
+            <Previous currentStep={this.state.currentStep} handlePreviousClick={this.handlePreviousClick}/>
+           
+        </div>
+        <h1>{filteredItem[0].title}</h1>
        </div>
     );
   }
