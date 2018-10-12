@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #282c34;
-  
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,22 @@
 } 
 
 
+.active-class {
+  background-color: green;
+}
+.completed-class {
+  background-color: orangered;
+}
+.bg-color-header {
+  background-color: rgba(0, 128, 0, 0.664);
+  text-align: center;
+  color: white;
+}
+.bg-color-footer {
+  background-color: rgba(0, 0, 0, 0.692);
+  text-align: center;
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

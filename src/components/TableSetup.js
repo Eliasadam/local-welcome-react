@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import { Fade } from 'reactstrap';
 import data from '../data/tableSetting.json';
+<<<<<<< HEAD
 import TableSettingPagination from './TableSettingPagination.js'
 import NextPreviousButtons from './NextPreviousButtons.js'
 import Previous from './Previous.js';
@@ -12,10 +13,20 @@ class  TableSetup extends Component {
       fadeIn: true ,
       appear: false
     }
+=======
+import TableSettingPagination from './TableSettingPagination.js';
+class TableSetup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentStep: 1,
+    };
+>>>>>>> raj/add_reactstrap_support
   }
-   setCurrentStep=(index)=>{
-     console.log(index);
+  setCurrentStep = index => {
+    console.log(index);
     //let n = this.state.currentStep;
+<<<<<<< HEAD
      this.setState({
         currentStep:index,
         appear:!this.state.appear,
@@ -44,13 +55,23 @@ class  TableSetup extends Component {
    
     })
   }
+=======
+    this.setState({
+      currentStep: index,
+    });
+  };
+
+>>>>>>> raj/add_reactstrap_support
   render() {
     console.log(data);
-    const filteredItem = data.filter((item)=> item.id === this.state.currentStep)
+    const filteredItem = data.filter(
+      item => item.id === this.state.currentStep
+    );
     console.log(filteredItem);
     return (
-       <div>
+      <div>
         <h2>Welcome to Table setup</h2>
+<<<<<<< HEAD
         <div class="button-container">
             <TableSettingPagination setCurrentStep={this.setCurrentStep}/>  
         </div>
@@ -68,9 +89,20 @@ class  TableSetup extends Component {
         </div>
         <h1>{filteredItem[0].title}</h1>
        </div>
+=======
+        <TableSettingPagination
+          currentStep={this.state.currentStep}
+          setCurrentStep={this.setCurrentStep}
+        />
+
+        <div>
+          <img src={filteredItem[0].url} alt={filteredItem[0].title} />
+          <h1>{filteredItem[0].title}</h1>
+        </div>
+      </div>
+>>>>>>> raj/add_reactstrap_support
     );
   }
 }
- 
 
 export default TableSetup;
