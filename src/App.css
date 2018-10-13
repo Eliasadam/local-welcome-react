@@ -22,10 +22,10 @@
 .App-link {
   color: #61dafb;
 }
-.pagination-button {
+button {
    display:inline;
    margin:2px;
-}
+} 
 .button-container{
    display: inline;
 }
@@ -57,9 +57,11 @@
 
 .active-class {
   background-color: green;
+ 
 }
 .completed-class {
   background-color: orangered;
+  
 }
 .bg-color-header {
   background-color: rgba(0, 128, 0, 0.664);
