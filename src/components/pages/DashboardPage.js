@@ -28,7 +28,6 @@ export default class DashboardPage extends Component {
         <h1>Welcome to Cook and Eat Ritual!</h1>
         {this.currentComponent(this.state.mainStep)}
         <Button
-          color="primary"
           onClick={this.setStepTo1}
           className={this.state.mainStep === 1 ? 'active-class' : null}
         >
