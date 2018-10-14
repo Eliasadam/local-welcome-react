@@ -41,9 +41,13 @@ button {
 .image-container{
   display:  inline-block;
   width: 70%;
+  box-shadow: 10px 10px 5px grey;
+
 }
 
-
+.picture{
+  width:100%;
+}
 
 .next-button {
    width: 80%;
@@ -73,6 +77,12 @@ button {
   text-align: center;
   color: white;
 }
+.errorMessage{
+  color: red;
+}
+ ul{
+   list-style: none;
+ }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
