@@ -7,9 +7,9 @@ import './App.css';
 class App extends Component {
   state = {
     isLoggedIn: false,
-    userValue: ' ',
-    passwordValue: ' ',
-    errorMessage: ' ',
+    userValue: '',
+    passwordValue: '',
+    errorMessage: '',
   };
   handleUserChange = e => {
     this.setState({
@@ -31,7 +31,7 @@ class App extends Component {
 
     this.setState({
       isLoggedIn: authorised,
-      errorMessage: authorised ? null: 'Invalid username or password',
+      errorMessage: authorised ? null : 'Invalid username or password',
     });
   };
 
