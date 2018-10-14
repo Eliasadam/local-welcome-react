@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DashboardPage from './components/pages/DashboardPage';
 import LoginPage from './components/pages/Loginpage';
-import data from './data/login.json';
+import users from './data/login.json';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     isLoggedIn: false,
     userValue: ' ',
     passwordValue: ' ',
-    errorMessage: ' '
+    errorMessage: ' ',
   };
   handleUserChange = e => {
     this.setState({
@@ -21,28 +21,20 @@ class App extends Component {
       passwordValue: e.target.value,
     });
   };
-  loginMe = () => {
-    let authorised;
-    let errorMessage;
-    data.map(item => {
-      if (
-        item.user === this.state.userValue &&
-        item.password === this.state.passwordValue
-      ) {
-        authorised = true;
-      } else {
-        errorMessage = 'invalid user name and password';
-      
-      }
-      console.log(authorised);
-      return authorised;
-    });
-    this.setState({ isLoggedIn: authorised,
-      errorMessage : errorMessage
-    
-    
+  loginMe = e => {
+    e.preventDefault();
+
+    const authorised = users.some(
+      ({ user, password }) =>
+        user === this.state.userValue && password === this.state.passwordValue
+    );
+
+    this.setState({
+      isLoggedIn: authorised,
+      errorMessage: authorised ? null: 'Invalid username or password',
     });
   };
+
   render() {
     return (
       <div className="App">
@@ -50,21 +42,22 @@ class App extends Component {
           <DashboardPage />
         ) : (
           <div>
-            <form />
-            <p className="errorMessage">{this.state.errorMessage}</p>
-            <ul>
-              <li>
-                <lable>User Name:</lable>
-                <input type="text" onChange={this.handleUserChange} />
-              </li>
-              <p />
-              <li>
-                <lable>Password:</lable>
-                <input type="password" onChange={this.handlePasswordChange} />
-              </li>
-            </ul>
+            <form onSubmit={this.loginMe}>
+              <p className="errorMessage">{this.state.errorMessage}</p>
+              <ul>
+                <li>
+                  <label>User Name:</label>
+                  <input type="text" onChange={this.handleUserChange} />
+                </li>
+                <p />
+                <li>
+                  <label>Password:</label>
+                  <input type="password" onChange={this.handlePasswordChange} />
+                </li>
+              </ul>
 
-            <LoginPage loginMe={this.loginMe} />
+              <LoginPage loginMe={this.loginMe} />
+            </form>
           </div>
         )}
       </div>
