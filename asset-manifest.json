@@ -1,15 +1,15 @@
 {
-  "main.css": "/Eliasadam/local-welcome-react/static/css/main.238a8d40.chunk.css",
-  "main.js": "/Eliasadam/local-welcome-react/static/js/main.f6162412.chunk.js",
-  "main.js.map": "/Eliasadam/local-welcome-react/static/js/main.f6162412.chunk.js.map",
-  "static/css/1.c6a7f1ae.chunk.css": "/Eliasadam/local-welcome-react/static/css/1.c6a7f1ae.chunk.css",
-  "static/js/1.d033fd87.chunk.js": "/Eliasadam/local-welcome-react/static/js/1.d033fd87.chunk.js",
-  "static/js/1.d033fd87.chunk.js.map": "/Eliasadam/local-welcome-react/static/js/1.d033fd87.chunk.js.map",
-  "runtime~main.js": "/Eliasadam/local-welcome-react/static/js/runtime~main.9ea65b28.js",
-  "runtime~main.js.map": "/Eliasadam/local-welcome-react/static/js/runtime~main.9ea65b28.js.map",
-  "static/css/1.c6a7f1ae.chunk.css.map": "/Eliasadam/local-welcome-react/static/css/1.c6a7f1ae.chunk.css.map",
-  "static/css/main.238a8d40.chunk.css.map": "/Eliasadam/local-welcome-react/static/css/main.238a8d40.chunk.css.map",
-  "index.html": "/Eliasadam/local-welcome-react/index.html",
-  "precache-manifest.ba3c01d09b413b15535dfffb6b4cf2e2.js": "/Eliasadam/local-welcome-react/precache-manifest.ba3c01d09b413b15535dfffb6b4cf2e2.js",
-  "service-worker.js": "/Eliasadam/local-welcome-react/service-worker.js"
+  "main.css": "/local-welcome-react/static/css/main.238a8d40.chunk.css",
+  "main.js": "/local-welcome-react/static/js/main.684183d5.chunk.js",
+  "main.js.map": "/local-welcome-react/static/js/main.684183d5.chunk.js.map",
+  "static/css/1.c6a7f1ae.chunk.css": "/local-welcome-react/static/css/1.c6a7f1ae.chunk.css",
+  "static/js/1.d033fd87.chunk.js": "/local-welcome-react/static/js/1.d033fd87.chunk.js",
+  "static/js/1.d033fd87.chunk.js.map": "/local-welcome-react/static/js/1.d033fd87.chunk.js.map",
+  "runtime~main.js": "/local-welcome-react/static/js/runtime~main.af97caf3.js",
+  "runtime~main.js.map": "/local-welcome-react/static/js/runtime~main.af97caf3.js.map",
+  "static/css/1.c6a7f1ae.chunk.css.map": "/local-welcome-react/static/css/1.c6a7f1ae.chunk.css.map",
+  "static/css/main.238a8d40.chunk.css.map": "/local-welcome-react/static/css/main.238a8d40.chunk.css.map",
+  "index.html": "/local-welcome-react/index.html",
+  "precache-manifest.282392bebbe5a402ff95609a563f5db3.js": "/local-welcome-react/precache-manifest.282392bebbe5a402ff95609a563f5db3.js",
+  "service-worker.js": "/local-welcome-react/service-worker.js"
 }
