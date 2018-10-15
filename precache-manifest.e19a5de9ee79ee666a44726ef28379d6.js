@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/local-welcome-react/static/js/runtime~main.af97caf3.js"
   },
   {
-    "revision": "7f9ed0b4482b758c932e",
-    "url": "/local-welcome-react/static/js/main.7f9ed0b4.chunk.js"
+    "revision": "9b553b14477c15aac05d",
+    "url": "/local-welcome-react/static/js/main.9b553b14.chunk.js"
   },
   {
-    "revision": "d033fd8773b522a490c4",
-    "url": "/local-welcome-react/static/js/1.d033fd87.chunk.js"
+    "revision": "8366c26f2b00fc59be52",
+    "url": "/local-welcome-react/static/js/1.8366c26f.chunk.js"
   },
   {
-    "revision": "7f9ed0b4482b758c932e",
+    "revision": "9b553b14477c15aac05d",
     "url": "/local-welcome-react/static/css/main.238a8d40.chunk.css"
   },
   {
-    "revision": "d033fd8773b522a490c4",
+    "revision": "8366c26f2b00fc59be52",
     "url": "/local-welcome-react/static/css/1.c6a7f1ae.chunk.css"
   },
   {
-    "revision": "8d030cc4eb969d7c77fd39fbb9d2e08e",
+    "revision": "fd92ea8f6d702c6fbcc43e908f316a8b",
     "url": "/local-welcome-react/index.html"
   }
 ];
