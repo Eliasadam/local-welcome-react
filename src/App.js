@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import DashboardPage from './components/pages/DashboardPage';
-import FormikEnhancer from './components/pages/Loginpage';
+import FormikEnhancer from './components/FormikEnhancer';
 import users from './data/login.json';
 import './App.css';
 
@@ -46,7 +46,7 @@ class App extends Component {
           <DashboardPage />
         ) : (
           
-      <FormikEnhancer/>
+          <FormikEnhancer loginMe={this.loginMe} handleUserChange={this.handleUserChange} handlePasswordChange={this.handlePasswordChange}/>
         )}
       </div>
     );
