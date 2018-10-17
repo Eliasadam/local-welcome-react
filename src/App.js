@@ -7,47 +7,22 @@ import users from './data/login.json';
 import './App.css';
 
 class App extends Component {
-//   state = {
-//     isLoggedIn: false,
-//     userValue: '',
-//     passwordValue: '',
-//     errorMessage: ''
-//   };
-//   handleUserChange = e => {
-//     this.setState({
-//       userValue: e.target.value,
-//     });
-//   };
-//   handlePasswordChange = e => {
-//     this.setState({
-//       passwordValue: e.target.value,
-//     });
-//   };
-//   loginMe = e => {
-//     e.preventDefault();
-
-//     const authorised = users.some(
-//       ({ user, password }) =>
-//         user === this.state.userValue && password === this.state.passwordValue
-//     );
-
-//     this.setState({
-//       isLoggedIn: authorised,
-//       errorMessage: authorised ? null : 'Invalid username or password',
-//     });
-//   };
+  state = {
+    isLoggedIn: false,
+  };
+  handleLogin = () => {
+    this.setState({ isLoggedIn: true });
+  };
 
   render() {
-    return (
-     
+    return this.state.isLoggedIn ? (
+      <DashboardPage />
+    ) : (
       <div className="App">
-     
-          <FormikEnhancer />
-        
+        <FormikEnhancer handleLogin={this.handleLogin} />
       </div>
     );
   }
 }
-
 
 export default App;
