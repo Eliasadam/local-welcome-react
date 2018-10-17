@@ -33,7 +33,7 @@ class LoginForm extends React.Component{
           isLoggedIn: authorised,
           errorMessage: authorised ? null : 'Invalid username or password',
         });
-        console.log(authorised)
+        
       };
     
 //
@@ -50,7 +50,7 @@ class LoginForm extends React.Component{
 
 render(){
   
-    
+    console.log(this.state.userValue);
     return(
 
    
@@ -62,13 +62,13 @@ render(){
     <p>{this.state.errorMessage}</p>
   <Form>
     <div>
-      {this.props.touched.userName && this.props.errors.userName &&  <div className="input-feedback">{this.props.errors.userName}</div>}
+      {this.props.touched.userName && this.props.errors.userName &&<p>{this.props.errors.userName}</p>}
       <Field type ='text' name='userName' placeholder="User Name" value={this.props.values.userName} onBlur={this.props.handleBlur} onChange={(e)=>{this.props.handleChange(e); this.handleUserChange(e)}}
       className={this.props.errors.userName && this.props.touched.userName ? 'text-input error' : 'text-input'
                     }/>
     </div>
     <div>
-      {this.props.touched.password && this.props.errors.password &&  <div className="input-feedback">{this.props.errors.password}</div>}
+      {this.props.touched.password && this.props.errors.password &&<p>{this.props.errors.password}</p>}
       <Field type ='password' name='password' placeholder="password" onBlur={this.props.handleBlur} onChange={(e)=>{this.props.handleChange(e); this.handlePasswordChange(e)}}
       className={this.props.errors.password && this.props.touched.password ? 'text-input error' : 'text-input'
                     }/>
@@ -80,7 +80,7 @@ render(){
         disabled={!this.props.dirty || this.props.isSubmitting}>
         Reset
       </button>
-      <button type='submit' disabled={this.props.isSubmitting}>submit</button>
+      <button onSubmit={(e)=>{this.loginMe(e)}} disabled={this.props.isSubmitting}>submit</button>
     </Form>
     </div>
   )
@@ -91,12 +91,11 @@ render(){
  
 }            
 const FormikEnhancer = withFormik({
-  mapPropsToValues:(props)=>{
-
+  mapPropsToValues({userName,password}){
+   
     return{
-      userName:props.userName || '',
-      password:props.password || '',
-      loginMe:props.loginMe
+      userName:userName || '',
+      password:password || '',
     
    
       
@@ -112,7 +111,7 @@ const FormikEnhancer = withFormik({
   }),
   handleSubmit(values,{setSubmitting, resetForm}){
      setTimeout(()=>{
-  values.loginMe()
+    
         resetForm()
         setSubmitting(false);
      },2000)
