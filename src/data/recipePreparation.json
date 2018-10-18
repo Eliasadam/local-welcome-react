@@ -2,20 +2,20 @@
   {
     "id": 1,
     "title": "Chickpea Salad",
-    "url": "../assets/image/chickpea.png"
+    "url": "/assets/image/chickpea.png"
   },
 
   {
     "id": 2,
     "title": "Potato Röstis",
-    "url": "../assets/image/rostis.png"
+    "url": "/assets/image/rostis.png"
   },
   {
     "id": 3,
     "title": "Tabbouleh",
-    "url": "../assets/image/tabbouleh.png",
-    "details":{
-      "1":""
+    "url": "/assets/image/tabbouleh.png",
+    "details": {
+      "1": ""
     }
   }
 ]
