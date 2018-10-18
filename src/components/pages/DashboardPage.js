@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import TableSetup from '../TableSetup';
 import RecipePreparation from '../RecipePreparation';
+//import RecipeSlides from '../RecipeSlides';
 import CleaningUp from '../CleaningUp';
 export default class DashboardPage extends Component {
   state = {
@@ -15,7 +16,7 @@ export default class DashboardPage extends Component {
       case 1:
         return <TableSetup />;
       case 2:
-        return <RecipePreparation />;
+        return <RecipePreparation/>;
       case 3:
         return <CleaningUp />;
       default:

@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import data from '../data/tableSetting.json';
 import TableSettingPagination from './TableSettingPagination.js';
