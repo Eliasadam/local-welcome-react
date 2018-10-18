@@ -20,7 +20,7 @@ const LoginForm = props => (
           placeholder="User Name"
           onBlur={props.handleBlur}
           className={
-            props.errors.userName && props.touched.userName
+            props.touched.userName && props.errors.userName
               ? 'text-input error'
               : 'text-input'
           }
@@ -37,7 +37,7 @@ const LoginForm = props => (
           placeholder="password"
           onBlur={props.handleBlur}
           className={
-            props.errors.password && props.touched.password
+            props.touched.password && props.errors.password
               ? 'text-input error'
               : 'text-input'
           }
