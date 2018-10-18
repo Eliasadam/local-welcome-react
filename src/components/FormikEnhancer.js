@@ -74,6 +74,8 @@ const FormikEnhancer = withFormik({
       .min(3, 'your password should be longer')
       .required('required.'),
   }),
+  //you can use handleChange here
+  //handleChange(e){}
   handleSubmit(
     { handleLogin, userName, password: pw },
     { setSubmitting, resetForm, setErrors }
