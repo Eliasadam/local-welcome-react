@@ -1,15 +1,15 @@
 {
   "main.css": "/local-welcome-react/static/css/main.6e7cc3b2.chunk.css",
-  "main.js": "/local-welcome-react/static/js/main.c3d484eb.chunk.js",
-  "main.js.map": "/local-welcome-react/static/js/main.c3d484eb.chunk.js.map",
+  "main.js": "/local-welcome-react/static/js/main.c81a84ff.chunk.js",
+  "main.js.map": "/local-welcome-react/static/js/main.c81a84ff.chunk.js.map",
   "static/css/1.33758e81.chunk.css": "/local-welcome-react/static/css/1.33758e81.chunk.css",
   "static/js/1.89445838.chunk.js": "/local-welcome-react/static/js/1.89445838.chunk.js",
   "static/js/1.89445838.chunk.js.map": "/local-welcome-react/static/js/1.89445838.chunk.js.map",
   "runtime~main.js": "/local-welcome-react/static/js/runtime~main.af97caf3.js",
   "runtime~main.js.map": "/local-welcome-react/static/js/runtime~main.af97caf3.js.map",
-  "static/css/main.6e7cc3b2.chunk.css.map": "/local-welcome-react/static/css/main.6e7cc3b2.chunk.css.map",
   "static/css/1.33758e81.chunk.css.map": "/local-welcome-react/static/css/1.33758e81.chunk.css.map",
+  "static/css/main.6e7cc3b2.chunk.css.map": "/local-welcome-react/static/css/main.6e7cc3b2.chunk.css.map",
   "index.html": "/local-welcome-react/index.html",
-  "precache-manifest.287041957340bf8d99a97914fc1f2a01.js": "/local-welcome-react/precache-manifest.287041957340bf8d99a97914fc1f2a01.js",
+  "precache-manifest.07690ef411d3dce64e8c3d216acd83d0.js": "/local-welcome-react/precache-manifest.07690ef411d3dce64e8c3d216acd83d0.js",
   "service-worker.js": "/local-welcome-react/service-worker.js"
 }
