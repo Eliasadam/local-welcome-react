@@ -1,127 +1,69 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import DashboardPage from './pages/DashboardPage';
 import users from '../data/login.json';
 import '../App.css';
-class LoginForm extends React.Component {
-  state = {
-    userValue: '',
-    passwordValue: '',
-    errorMessage: '',
-  };
-  handleUserChange = e => {
-    this.setState({
-      userValue: e.target.value,
-    });
-  };
-  handlePasswordChange = e => {
-    this.setState({
-      passwordValue: e.target.value,
-    });
-  };
-  loginMe = e => {
-    e.preventDefault();
-
-    const authorised = users.some(
-      ({ user, password }) =>
-        user === this.state.userValue && password === this.state.passwordValue
-    );
-
-    this.setState({
-      isLoggedIn: authorised,
-      errorMessage: authorised ? null : 'Invalid username or password',
-    });
-    console.log(authorised);
-  };
-
-  //
-  //   values,
-  //   errors,
-  //   touched,
-  //   dirty,
-  //   isSubmitting,
-  //   handleBlur,
-  //   handleReset,
-  //   handleUserChange,
-  //   handlePasswordChange,
-  //   loginMe
-
-  render() {
-    return (
-      <div className="formWrapper">
-        <p>{this.state.errorMessage}</p>
-        <Form>
-          <div>
-            {this.props.touched.userName &&
-              this.props.errors.userName && (
-                <div className="input-feedback">
-                  {this.props.errors.userName}
-                </div>
-              )}
-            <Field
-              type="text"
-              name="userName"
-              placeholder="User Name"
-              value={this.props.values.userName}
-              onBlur={this.props.handleBlur}
-              onChange={e => {
-                this.props.handleChange(e);
-                this.handleUserChange(e);
-              }}
-              className={
-                this.props.errors.userName && this.props.touched.userName
-                  ? 'text-input error'
-                  : 'text-input'
-              }
-            />
-          </div>
-          <div>
-            {this.props.touched.password &&
-              this.props.errors.password && (
-                <div className="input-feedback">
-                  {this.props.errors.password}
-                </div>
-              )}
-            <Field
-              type="password"
-              name="password"
-              placeholder="password"
-              onBlur={this.props.handleBlur}
-              onChange={e => {
-                this.props.handleChange(e);
-                this.handlePasswordChange(e);
-              }}
-              className={
-                this.props.errors.password && this.props.touched.password
-                  ? 'text-input error'
-                  : 'text-input'
-              }
-            />
-          </div>
-          <button
-            type="button"
-            className="outline"
-            onClick={this.props.handleReset}
-            disabled={!this.props.dirty }
-          >
-            Reset
-          </button>
-          <button type="submit" disabled={ this.props.isSubmitting}>
-            submit
-          </button>
-        </Form>
+const LoginForm = props => (
+  <div className="formWrapper">
+    <Form>
+      <div>
+        {(props.touched.userName &&
+          props.errors.userName && (
+            <div className="input-feedback">{props.errors.userName}</div>
+          )) ||
+          (props.errors.errorMessage && (
+            <div className="input-feedback">{props.errors.errorMessage}</div>
+          ))}
+        <Field
+          type="text"
+          name="userName"
+          placeholder="User Name"
+          onBlur={props.handleBlur}
+          className={
+            props.errors.userName && props.touched.userName
+              ? 'text-input error'
+              : 'text-input'
+          }
+        />
       </div>
-    );
-  }
-}
+      <div>
+        {props.touched.password &&
+          props.errors.password && (
+            <div className="input-feedback">{props.errors.password}</div>
+          )}
+        <Field
+          type="password"
+          name="password"
+          placeholder="password"
+          onBlur={props.handleBlur}
+          className={
+            props.errors.password && props.touched.password
+              ? 'text-input error'
+              : 'text-input'
+          }
+        />
+      </div>
+      <button
+        type="button"
+        className="outline"
+        onClick={props.handleReset}
+        disabled={!props.dirty}
+      >
+        Reset
+      </button>
+      <button type="submit" disabled={props.isSubmitting}>
+        submit
+      </button>
+    </Form>
+  </div>
+);
+
 const FormikEnhancer = withFormik({
   mapPropsToValues: props => {
     return {
       userName: props.userName || '',
       password: props.password || '',
       handleLogin: props.handleLogin,
-   
     };
   },
   validationSchema: Yup.object().shape({
@@ -132,19 +74,21 @@ const FormikEnhancer = withFormik({
       .min(3, 'your password should be longer')
       .required('required.'),
   }),
-  handleSubmit({ handleLogin, userName, password}, { setSubmitting, resetForm, setErrors }) {
+  handleSubmit(
+    { handleLogin, userName, password: pw },
+    { setSubmitting, resetForm, setErrors }
+  ) {
     setTimeout(() => {
-        
-        const authorised = users.some(
-            ({ user, password }) =>
-              user === userName && password === password
-          );
-
-          authorised? (handleLogin()):(setErrors({userName:'invalid user name and password'}))
-         
-          return authorised
-          
-      resetForm();
+      if (
+        users.some(({ user, password }) => user === userName && password === pw)
+      ) {
+        handleLogin();
+        resetForm();
+      } else {
+        setErrors({
+          errorMessage: 'please enter a valid user name or password!',
+        });
+      }
       setSubmitting(false);
     }, 1000);
   },
