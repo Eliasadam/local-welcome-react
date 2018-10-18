@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import items from '../data/potatoRostisSlides.json';
+import items from '../data/chickPeaSaladSlides.json';
 import {
   Carousel,
   CarouselItem,
@@ -11,7 +11,7 @@ import {
 
 
 
-class PotatoRostisSlides extends Component {
+class ChickPeaSlides extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -93,4 +93,4 @@ class PotatoRostisSlides extends Component {
 
 
 
-export default PotatoRostisSlides;
+export default ChickPeaSlides;
