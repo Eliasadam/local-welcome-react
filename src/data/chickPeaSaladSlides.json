@@ -1,36 +1,36 @@
 [
-  {
-    "altText": " Step 1: Peel and finely slice the red onion. Add to bowl. ",
-    "caption": "Question 1: Peel and finely slice the red onion. Add to bowl. What is your favourite memory of the place you were born?"
+  {  "id": 1,
+    "altText": " Peel and finely slice the red onion. Add to bowl.",
+    "caption": "Question 1: What is your favourite memory of the place you were born?"
 
   },
-  {
-    "altText": "Step 2: Peel and grate an onion into the same bowl.",
+  {  "id": 2,
+    "altText": "Step 2: Remove the seeds of the chilli into the waste tub, & finely slice. Add to bowl.",
     "caption": "Question 2: What was your favourite meal ever, and why?"
   },
-  {
-    "altText": "Step 3: Squeeze the mixture in your hands to remove as much moisture as possible, placing the dry mixture in the blue plastic grater bowl. Switch on the griddle with caution.",
+  { "id": 3,
+    "altText": "Step 3: Roughly chop the tomatoes and mix with onion and chilli in a bowl.",
     "caption": "Question 3: What was the best thing that happened to you in the last week?"
   },
-  {
-    "altText": "Step 4: Return the dry mixture to the metal mixing bowl, then mix in 2 tablespoons of flour and 1 egg. Season with salt, pepper or herbs",
+  {  "id": 4,
+    "altText": "Step 4: Step 4: Drain the chickpeas into the waste tub, mash about 10% of them & mix in.",
     "caption": "Question 4: What are you are looking forward to next week?"
   },
-  {
-    "altText": "Step 5: (Add 2 tbsp oil to the hot griddle and divide the mixture into equal portions.)",
+  { "id": 5,
+    "altText": "Step 5: Chop the mint & rip the basil, add to bowl.",
     "caption": "Question 5: What are your strengths now, and is there one strength or skill you'd like to develop in the next year?"
   },
-  {
-    "altText": "Step 6: (Place one portion of grated potato on the hot griddle, and press down gently using the back of a spatula. Fry the rostis for 3-4 minutes on both sides. However, please don't use metal cutlery, it scratches the griddle.",
+  { "id": 6,
+    "altText": "Step 6: Squeeze the lemon juice into the bowl, along with 3 tbsp olive oil, and salt & pepper to taste.",
     "caption": "Question 6: In the next month, how will you use your strengths and start learning a new skill?"
     
   }, 
-  {
-    "altText": "Step 7: Slice an avocado in half, take out the seed, and cut the 2 halves into slices. Then turn over the rostis and cook the other side for about 10 mins. After 5 mins you can turn off the head and put on the lid. While we wait, please can one pair clean the table while the rest of us wash and dry the kit to go back in the box for next time. Thanks!",
+  { "id": 7,
+    "altText": "Step 7: Place the bowl’s contents onto serving dishes, and finish by crumbling the feta over the top. When the salad is ready, please take the bowls into the next room to share. While we wait, please can one pair clean the table while the rest of us wash and dry the kit to go back in the box for next time. Thanks!",
 
     "caption": "Question 7: In the next 2 weeks, would you like any help or encouragement using your strengths to develop new skills?"
   }, 
-  {
+  {  "id": 8,
     "altText": "Final Step: When everything is cleaned up and back in the box, you're ready to enjoy your meal / ride your bike etc).",
     "caption": "Thanks for leading the table assigned to you!"
   }
