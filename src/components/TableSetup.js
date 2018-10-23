@@ -1,78 +1,156 @@
 import React, { Component } from 'react';
-//import { Fade } from 'reactstrap';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from 'reactstrap';
+
 import data from '../data/tableSetting.json';
-import TableSettingPagination from './TableSettingPagination.js'
-import Next from './Next.js'
-import Previous from './Previous.js';
-class  TableSetup extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      currentStep: 1,
-      fadeIn: true ,
-      appear: false
-    }
+
+class TableSetup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+       activeIndex: 0 ,
+       currentStep: 1,
+       translateValue: 0,
+       fadeIn: true,
+       appear: false,
+       modal: false
+    };
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.goToIndex = this.goToIndex.bind(this);
+    this.onExiting = this.onExiting.bind(this);
+    this.onExited = this.onExited.bind(this);
   }
-  setCurrentStep = index => {
-    //console.log(index);
-    //let n = this.state.currentStep;
-     this.setState({
-        currentStep:index,
-        appear:!this.state.appear,
-        fadeIn:this.state.fadeIn,
+
+  onExiting() {
+    this.animating = true;
+  }
+
+  onExited() {
+    this.animating = false;
+  }
+
+  next() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === data.length? data.length: this.state.activeIndex + 1;
+
+    this.setState({ activeIndex: nextIndex });
+    //let currentIndex = index <= data.length?(index+1):(index=data.length+1)
+    console.log(nextIndex);
+    let modal = nextIndex == data.length? this.handleModal() : null;
   
-    
-
-       
-     })
-   }
-
-   handleNextClick=(index)=>{
-    let currentIndex = index<data.length?(index+1):(index=data.length)
-    //console.log(currentIndex)
-     this.setState({
-       currentStep : currentIndex,
-       
-     })
-   }
-
-   handlePreviousClick=(index)=>{
-    let currentIndex = index>1?(index-1):(index=1)
-    //console.log(currentIndex)
-    this.setState({
-      currentStep : currentIndex,
-   
-    })
+    return modal;
   }
+
+  previous() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === 0 ? data.length - 1 : this.state.activeIndex - 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  goToIndex(newIndex) {
+    if (this.animating) return;
+    this.setState({ activeIndex: newIndex });
+  }
+ 
+
+  handleModal() {
+    this.setState({
+      modal: !this.state.modal,
+    });
+  }
+  handleNextClick = index => {
+  
+    //  if (index<=data.length+1){
+    //index = index + 1;
+    let currentIndex = index <= data.length?(index+1):(index=data.length+1)
+    let modal = currentIndex == data.length + 1 ? this.handleModal() : null;
+  
+    return modal;
+    // if (index <= data.length) {
+    //   this.setState(() => ({
+    //     currentStep: index,
+    //     translateValue: this.state.translateValue - this.slideWidth(),
+    //   }));
+    // } else {
+    //   index = data.length + 1;
+    //   console.log(index);
+    //   console.log(index);
+    //   let modal = index == data.length + 1 ? this.handleModal() : null;
+  
+    //   return modal;
+    // }
+  }
+
+
   render() {
-   // console.log(data);
-    const filteredItem = data.filter(
-      item => item.id === this.state.currentStep
-    );
-   // console.log(filteredItem);
+    const { activeIndex } = this.state;
+
+    const slides = data.map((item) => {
+      return (
+        <CarouselItem
+          onExiting={this.onExiting}
+          onExited={this.onExited}
+          key={item.url}
+        >
+          <img src={item.url} alt={item.title} className="picture" />
+          <CarouselCaption captionText={item.title} captionHeader={item.title} />
+        </CarouselItem>
+      );
+    });
+
     return (
       <div>
-        <h2>Welcome to Table setup</h2>
-        {/* <div class="button-container"> */}
-          <TableSettingPagination setCurrentStep={this.setCurrentStep} currentStep={this.state.currentStep}/>  
-        {/* </div> */}
-        <div className="middle">
-        <Previous currentStep={this.state.currentStep} handlePreviousClick={this.handlePreviousClick}/>
-          
-          
-              <div className='image-container'>
-                 <img className="picture" src={filteredItem[0].url} alt={filteredItem[0].title}/>
-                 
-              </div>
-
-        <Next handleNextClick={this.handleNextClick} currentStep={this.state.currentStep}/>
-            
-           
+      <Carousel
+        activeIndex={activeIndex}
+        next={this.next}
+        previous={this.previous}
+        interval={false}
+      >
+        <CarouselIndicators items={data} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+        {slides}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        
+      </Carousel>
+      <div>
+            <Modal
+              isOpen={this.state.modal}
+              modalTransition={{ timeout: 700 }}
+              backdropTransition={{ timeout: 1300 }}
+              toggle={this.toggle}
+              className={this.props.className}
+            >
+              <ModalHeader toggle={this.toggle}>Local Welcome</ModalHeader>
+              <ModalBody>
+                <h1>
+                  {' '}
+                  Welcome to Cook and Eat Ritual! You complete this stage
+                  successfully and you are ready to move to the second stage
+                </h1>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" onClick={this.props.setStepTo2}>
+                  Next Stage
+                </Button>{' '}
+                
+              </ModalFooter>
+            </Modal>
+          </div>
         </div>
-        <h1>{filteredItem[0].title}</h1>
-       </div>
     );
   }
 }
+
 
 export default TableSetup;

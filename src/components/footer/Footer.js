@@ -1,7 +1,8 @@
 import React from 'react';
+import "./Footer.css"
 const Footer = () => (
   <footer className="bg-color-footer">
-    <h1>Footer goes here!</h1>
+    <p>copyright 2018 Local Welcome</p>
   </footer>
 );
 export default Footer;

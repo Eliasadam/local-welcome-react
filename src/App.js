@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
-//import { withFormik,Form,Field } from 'formik';
-//import * as Yup from 'yup';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import DashboardPage from './components/pages/DashboardPage';
 import FormikEnhancer from './components/FormikEnhancer';
 import users from './data/login.json';
 import './App.css';
 
 class App extends Component {
-  state = {
-    isLoggedIn: false,
-  };
+   constructor(props) {
+    super(props);
+      this.state = {
+        isLoggedIn: false,
+         modal: false
+      };
+        this.toggle = this.toggle.bind(this);
+   }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
   handleLogin = () => {
     this.setState({ isLoggedIn: true });
   };
@@ -19,7 +30,24 @@ class App extends Component {
       <DashboardPage />
     ) : (
       <div className="App">
-        <FormikEnhancer handleLogin={this.handleLogin} />
+         <h2 className="head-title">
+          Hello, we are Local Welcome
+         </h2>
+          <p>
+           you are now ready to start the ritual eating event.
+          </p>
+          <p>
+            Please click on the button below to login
+          </p>
+           <Button color="success" onClick={this.toggle}>Login</Button>
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+               <ModalHeader toggle={this.toggle} style={{'color':'#8ac43f'}}>Local Welcome</ModalHeader>
+               <ModalBody>
+                 <FormikEnhancer handleLogin={this.handleLogin} />
+               </ModalBody>
+            </Modal>
+           
+     
       </div>
     );
   }

@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import TableSetup from '../TableSetup';
 import RecipePreparation from '../RecipePreparation';
 import CleaningUp from '../CleaningUp';
+import './DashboardPage.css';
 export default class DashboardPage extends Component {
   state = {
     mainStep: 0,
@@ -13,7 +14,7 @@ export default class DashboardPage extends Component {
   currentComponent = step => {
     switch (this.state.mainStep) {
       case 1:
-        return <TableSetup />;
+        return <TableSetup setStepTo2={this.setStepTo2}/>;
       case 2:
         return <RecipePreparation />;
       case 3:
@@ -24,29 +25,41 @@ export default class DashboardPage extends Component {
   };
   render() {
     return (
-      <div>
-        <h1>Welcome to Cook and Eat Ritual!</h1>
+      <div className="dashboardWrapper">
+       
+       {this.state.mainStep == 0? <h1 className="head-title">Welcome to Cook and Eat Ritual!</h1>: null}
         {this.currentComponent(this.state.mainStep)}
         <Button
-          color="primary"
+         
           onClick={this.setStepTo1}
-          className={this.state.mainStep === 1 ? 'active-class' : null}
+          className={
+            (this.state.mainStep === 1 ? 'active-class' : '') + ' dashboard mr-2 mt-2 mb-2'
+          }
+         
         >
           {' '}
-          Table setup startingn...{' '}
+          Table setup {' '}
         </Button>
         <Button
+          
           onClick={this.setStepTo2}
-          className={this.state.mainStep === 2 ? 'active-class' : null}
+          className={
+            (this.state.mainStep === 2 ? 'active-class' : '') + ' dashboard mr-2 mt-2 mb-2'
+          }
+         disabled={this.state.mainStep != 2}
         >
           {' '}
-          Recipe preparation startingn...{' '}
+          Recipe preparation {' '}
         </Button>
         <Button
+         
           onClick={this.setStepTo3}
-          className={this.state.mainStep === 3 ? 'active-class' : null}
+          className={
+            (this.state.mainStep === 3 ? 'active-class' : '') + ' dashboard mt-2 mb-2'
+          }
+          disabled={this.state.mainStep != 3}
         >
-          Cleaning up startingn...
+          Cleaning up 
         </Button>
       </div>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
+import { Button } from 'reactstrap';
 import * as Yup from 'yup';
 import DashboardPage from './pages/DashboardPage';
 import users from '../data/login.json';
@@ -99,17 +100,17 @@ class LoginForm extends React.Component {
               }
             />
           </div>
-          <button
+          <Button
             type="button"
-            className="outline"
+            className="secondary"
             onClick={this.props.handleReset}
             disabled={!this.props.dirty }
           >
             Reset
-          </button>
-          <button type="submit" disabled={ this.props.isSubmitting}>
+          </Button>
+          <Button className="secondary" type="submit" disabled={ this.props.isSubmitting}>
             submit
-          </button>
+          </Button>
         </Form>
       </div>
     );
