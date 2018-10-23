@@ -1,16 +1,25 @@
+* { 
+  font-style:Sans-serif;
+  font-weight:bold;
+}
 .App {
   text-align: center;
+  min-height:60vh;
+  padding-top:5rem;
 }
-
+#root {
+  width: 100%;
+  text-align: center;
+  
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-
-  min-height: 100vh;
+  background-color:#8ac43f;
+  min-height: 28vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,79 +31,153 @@
 .App-link {
   color: #61dafb;
 }
+
+.head-title{
+  color:#8ac43f;
+}
 button {
-   display:inline;
-   margin:2px;
-} 
-.button-container{
-   display: inline;
+  display: inline;
+  margin: 2px;
+}
+.button-container {
+  display: inline;
 }
 
-.next-container{
+
+
+
+/* carasoul and pagination style */
+
+.middle {
+  position: relative;
+  margin: 0 30px;
+}
+.carousel-wrapper {
+  position: relative;
+}
+.picture {
+  display: inline-block;
+  position:relative;
+  height:60vh;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.image-container {
+  display: inline-block;
+  width: 100%;
+  box-shadow: 10px 10px 5px grey;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.5s ease-in-out;
+}
+.next-button {
+  width: 100%;
+  z-index: 999;
+  height: 60px;
+  border: none;
+  background: url('/images/next-arrow.png') no-repeat top right;
+  padding: 2px 8px;
+  cursor: pointer;
+  outline:none;
+}
+.next-button:hover{
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  background: url('/images/next-arrow-hover.png') no-repeat top right;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.next-button:active{
+ outline: none;
+ border:none
+}
+.next-button:visited{
+ outline: none;
+ border:none
+}
+
+.previous-button {
+  width: 100%;
+  height: 60px;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background: url('/images/previous-arrow.png') no-repeat top left;
+  padding: 2px 8px;
+  cursor: pointer;
+ 
+}
+.previous-button:hover{
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline:none;
+  background: url('/images/previous-arrow-hover.png') no-repeat top left;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.previous-button:active{
+ outline: none;
+ border: none;
+}
+.previous-button:visited{
+ outline: none;
+ border:none
+}
+.next-container {
   display: inline-block;
   width: 15%;
+  position: absolute;
+  top: 100px;
+  right: 0;
 }
-.previous-button {
-   width: 80%;
-}
-
-.image-container{
-  display:  inline-block;
-  width: 70%;
-  box-shadow: 10px 10px 5px grey;
-
-}
-
-.picture{
-  width:100%;
-}
-
-.next-button {
-   width: 80%;
-}
-
-.previous-container{
-  display:  inline-block;
+.previous-container {
+  display: inline-block;
   width: 15%;
-} 
-
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
 
 .active-class {
-  background-color: green;
- 
+  background-color: green !important;
 }
 .completed-class {
   background-color: orangered;
-  
 }
-.bg-color-header {
-  background-color: rgba(0, 128, 0, 0.664);
-  text-align: center;
-  color: white;
+
+
+
+
+
+.dashboard-btn {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 0;
+  background-color: d2d4d6
 }
-.bg-color-footer {
-  background-color: rgba(0, 0, 0, 0.692);
-  text-align: center;
-  color: white;
-}
+
+
 
 /* login form style  */
 
-.formWrapper{
+.formWrapper {
   margin-left: auto;
-  margin-right:auto;
-  width:50%;
+  margin-right: auto;
+  width: 50%;
 }
-.errorMessage{
+.errorMessage {
   color: red;
 }
- ul{
-   list-style: none;
- }
-
+ul {
+  list-style: none;
+}
 
 input {
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 16px;
   width: 100%;
   display: block;
@@ -116,40 +199,28 @@ input.error {
 label {
   font-weight: bold;
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .input-feedback {
   color: red;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 
-button {
-  max-width: 150px;
-  margin: 20px 0;
-  padding: 12px 20px;
-  border-style: none;
-  border-radius: 5px;
-  background-color: #08c;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-  font-size: 17px;
-  font-weight: 500;
-  color: #fff;
-  cursor: pointer;
-  outline: none;
-  -webkit-appearance: none;
-}
+
 
 button:disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed !important;
 }
 
-button + button {
-  margin-left: .5rem;
-}
+/* button + button {
+  margin-left: 0.5rem;
+} */
 
-button.outline {
+button.secondary {
+  padding: 0.5rem;
+  width:100%;
   background-color: #eee;
   border: 1px solid #aaa;
   color: #555;

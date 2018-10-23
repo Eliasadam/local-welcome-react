@@ -1,5 +1,6 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
+import { Button } from 'reactstrap';
 import * as Yup from 'yup';
 import users from '../data/login.json';
 import '../App.css';
@@ -25,6 +26,7 @@ const LoginForm = props => (
               : 'text-input'
           }
         />
+
       </div>
       <div>
         {props.touched.password &&
@@ -43,17 +45,17 @@ const LoginForm = props => (
           }
         />
       </div>
-      <button
+      <Button
         type="button"
-        className="outline"
+        className="secondary"
         onClick={props.handleReset}
         disabled={!props.dirty}
       >
         Reset
-      </button>
-      <button type="submit" disabled={props.isSubmitting}>
+      </Button>
+      <Button type="submit" disabled={props.isSubmitting} className="secondary">
         submit
-      </button>
+      </Button>
     </Form>
   </div>
 );

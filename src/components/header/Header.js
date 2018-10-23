@@ -1,7 +1,8 @@
 import React from 'react';
+import "./Header.css"
 const Header = () => (
   <header className="bg-color-header">
-    <h1>Header goes here!</h1>
+   <img src="/images/local-welcome.png" alt="logo" id="logo"/>
   </header>
 );
 export default Header;

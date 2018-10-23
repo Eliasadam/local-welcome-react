@@ -3,8 +3,8 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import App from '../App';
 
 import NotFoundPage from '../components/pages/NotFoundPage';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/header/Header.js';
+import Footer from '../components/footer/Footer.js';
 const AppRouter = () => (
   <Router>
     <div>

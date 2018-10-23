@@ -13,6 +13,7 @@ class RecipePreparation extends Component {
   }
 
   render() {
+   
     const filteredValue = data.filter(item => item.id);
 
     return this.state.recipeSelected === true ? (

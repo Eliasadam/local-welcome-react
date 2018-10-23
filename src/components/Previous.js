@@ -4,9 +4,9 @@ import {Button} from 'reactstrap';
 const Previous =(props)=>{
     return(
         <div className="previous-container">
-           <Button className="previous-button primary" onClick={()=>props.handlePreviousClick(props.currentStep)}
+           <button className="previous-button" onClick={()=>props.handlePreviousClick(props.currentStep)}
            disabled={props.currentStep <= 1}
-           >Previous</Button>
+           ></button>
         </div>
     )
 }
