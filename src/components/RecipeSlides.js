@@ -139,7 +139,7 @@ class RecipeSlides extends Component {
             <h1>Please go to the next next</h1>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.handleModal}>Do Something</Button>{' '}
+            <Button color="primary" onClick={this.state.CleaningUpWelcomePage}>Do Something</Button>{' '}
           </ModalFooter>
         </Modal>
         </Col>
