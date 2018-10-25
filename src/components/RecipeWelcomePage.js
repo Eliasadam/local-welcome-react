@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import TabbuolehSlides from './TabbuolehSlides.js';
+import RecipeSlides from './RecipeSlides';
 
-class TabbuolehWelcomePage extends Component {
+
+
+class RecipeWelcomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,11 +13,11 @@ class TabbuolehWelcomePage extends Component {
 
   render() {
     
+
     return this.state.goToRecipeStep === true ? (
-      <TabbuolehSlides/>
+      <RecipeSlides items={this.props.slides}/>
     ) : (
       <div>
-      <h1>Welcome to Local Welcome! </h1>
 
 <h4>Thanks for agreeing to lead a table. </h4>
 
@@ -34,4 +36,4 @@ class TabbuolehWelcomePage extends Component {
   }
 }
 
-export default TabbuolehWelcomePage;
+export default RecipeWelcomePage;

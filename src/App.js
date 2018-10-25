@@ -8,7 +8,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    isLoggedIn: false,
+    isLoggedIn: true,
   };
   handleLogin = () => {
     this.setState({ isLoggedIn: true });
