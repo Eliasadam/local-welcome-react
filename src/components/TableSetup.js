@@ -47,7 +47,7 @@ class TableSetup extends Component {
 
     this.setState({ activeIndex: nextIndex });
     //let currentIndex = index <= data.length?(index+1):(index=data.length+1)
-    console.log(nextIndex);
+    //console.log(nextIndex);
     let modal = nextIndex == data.length? this.handleModal() : null;
   
     return modal;
@@ -70,28 +70,28 @@ class TableSetup extends Component {
       modal: !this.state.modal,
     });
   }
-  handleNextClick = index => {
+  // handleNextClick = index => {
   
-    //  if (index<=data.length+1){
-    //index = index + 1;
-    let currentIndex = index <= data.length?(index+1):(index=data.length+1)
-    let modal = currentIndex == data.length + 1 ? this.handleModal() : null;
+  //   //  if (index<=data.length+1){
+  //   //index = index + 1;
+  //   let currentIndex = index <= data.length?(index+1):(index=data.length+1)
+  //   let modal = currentIndex == data.length + 1 ? this.handleModal() : null;
   
-    return modal;
-    // if (index <= data.length) {
-    //   this.setState(() => ({
-    //     currentStep: index,
-    //     translateValue: this.state.translateValue - this.slideWidth(),
-    //   }));
-    // } else {
-    //   index = data.length + 1;
-    //   console.log(index);
-    //   console.log(index);
-    //   let modal = index == data.length + 1 ? this.handleModal() : null;
+  //   return modal;
+  //   // if (index <= data.length) {
+  //   //   this.setState(() => ({
+  //   //     currentStep: index,
+  //   //     translateValue: this.state.translateValue - this.slideWidth(),
+  //   //   }));
+  //   // } else {
+  //   //   index = data.length + 1;
+  //   //   console.log(index);
+  //   //   console.log(index);
+  //   //   let modal = index == data.length + 1 ? this.handleModal() : null;
   
-    //   return modal;
-    // }
-  }
+  //   //   return modal;
+  //   // }
+  // }
 
 
   render() {
@@ -104,7 +104,9 @@ class TableSetup extends Component {
           onExited={this.onExited}
           key={item.url}
         >
+           <h3 className="caption">{item.title}</h3>
           <img src={item.url} alt={item.title} className="picture" />
+         
           <CarouselCaption captionText={item.title} captionHeader={item.title} />
         </CarouselItem>
       );
@@ -118,6 +120,7 @@ class TableSetup extends Component {
         previous={this.previous}
         interval={false}
       >
+      
         <CarouselIndicators items={data} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
