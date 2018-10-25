@@ -156,6 +156,9 @@ button {
   background-color: d2d4d6
 }
 
+.list-item{
+  width: 25%
+}
 .caption {
     width: 500px;
     height: 80px;
@@ -163,6 +166,8 @@ button {
      opacity:0;
       transition: all 1000ms ease-out 600ms;
 }
+
+
    /* opacity:0;
    filter:alpha(opacity=0);
    
@@ -249,7 +254,9 @@ button.secondary {
   border: 1px solid #aaa;
   color: #555;
 }
-
+.carousel-item, .carousel-item.active {
+  align-items:center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
