@@ -1,8 +1,11 @@
+
+
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import TableSetup from '../TableSetup';
 import RecipePreparation from '../RecipePreparation';
-import CleaningUp from '../CleaningUp';
+//import CleaningUp from '../CleaningUp';
+import CleaningUpWelcomePage from "../CleaningUpWelcomePage"
 import './DashboardPage.css';
 export default class DashboardPage extends Component {
   state = {
@@ -16,9 +19,9 @@ export default class DashboardPage extends Component {
       case 1:
         return <TableSetup setStepTo2={this.setStepTo2}/>;
       case 2:
-        return <RecipePreparation />;
+        return <RecipePreparation setStepTo3={this.setStepTo3}/>;
       case 3:
-        return <CleaningUp />;
+        return <CleaningUpWelcomePage />;
       default:
         return <h1> We are ready to get started ... Say something </h1>;
     }

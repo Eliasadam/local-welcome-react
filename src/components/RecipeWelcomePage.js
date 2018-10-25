@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import PotatoRostisSlides from './PotatoRostisSlides';
+import RecipeSlides from './RecipeSlides';
 
-class PotatoRostisWelcomePage extends Component {
+
+
+class RecipeWelcomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,13 +12,12 @@ class PotatoRostisWelcomePage extends Component {
   }
 
   render() {
-    //const filteredValue = data.filter(item => item.id);
+    
 
     return this.state.goToRecipeStep === true ? (
-      <PotatoRostisSlides/>
+      <RecipeSlides items={this.props.slides} setStepTo3={this.props.setStepTo3}/>
     ) : (
       <div>
-      <h1>Welcome to Local Welcome! </h1>
 
 <h4>Thanks for agreeing to lead a table. </h4>
 
@@ -35,4 +36,4 @@ class PotatoRostisWelcomePage extends Component {
   }
 }
 
-export default PotatoRostisWelcomePage;
+export default RecipeWelcomePage;

@@ -249,7 +249,9 @@ button.secondary {
   border: 1px solid #aaa;
   color: #555;
 }
-
+.carousel-item, .carousel-item.active {
+  align-items:center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
