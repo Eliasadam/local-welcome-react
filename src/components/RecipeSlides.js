@@ -86,15 +86,9 @@ class RecipeSlides extends Component {
           onExited={this.onExited}
          
         >
-        <h3>{item.caption}</h3>
-        <h3>{item.altText}</h3>
-        
-          <CarouselCaption
-            className="text-white"
-            captionText={item.caption}
-            captionHeader={item.altText}
-            
-          />
+        <h4>{item.caption}</h4>
+        <h4>{item.altText}</h4>
+
         </CarouselItem>
       );
     });
@@ -106,6 +100,10 @@ class RecipeSlides extends Component {
                 max-width: 100%;
                 height: 530px;
                 background: #8ac43f;
+                
+              },
+              h4 {
+                color: white;
               }`}
         </style>
         <Col sm={{ size: 'auto', offset: 1 }}>
@@ -139,7 +137,7 @@ class RecipeSlides extends Component {
             <h1>Please go to the next next</h1>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
+            <Button color="primary" onClick={this.handleModal}>Do Something</Button>{' '}
           </ModalFooter>
         </Modal>
         </Col>
