@@ -24,7 +24,7 @@ class RecipePreparation extends Component {
     ) : (
       <div>
         <Row className >
-        <Col sm={{ size: 'auto', offset: 1 }}>
+        <Col sm={{ size: 'auto', offset: 1 }} className="list-item">
             <CardImg top width="100%" src={filteredValue[0].url} />
             <button
               onClick={() =>
@@ -38,7 +38,7 @@ class RecipePreparation extends Component {
             </button>
           </Col>
 
-          <Col sm={{ size: 'auto', offset: 1 }}>
+          <Col sm={{ size: 'auto', offset: 1 }} className="list-item">
             <CardImg top width="100%" src={filteredValue[1].url} />
             <button
               onClick={() =>
@@ -52,7 +52,7 @@ class RecipePreparation extends Component {
             </button>
           </Col>
 
-          <Col sm={{ size: 'auto', offset: 1 }}>
+          <Col sm={{ size: 'auto', offset: 1 }}  className="list-item">
             <CardImg top width="100%" src={filteredValue[2].url} />
             <button
               onClick={() =>
