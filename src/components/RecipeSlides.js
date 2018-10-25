@@ -86,8 +86,10 @@ class RecipeSlides extends Component {
           onExited={this.onExited}
          
         >
+        <div className="header">
         <h4>{item.caption}</h4>
         <h4>{item.altText}</h4>
+        </div>
 
         </CarouselItem>
       );
@@ -102,7 +104,7 @@ class RecipeSlides extends Component {
                 background: #8ac43f;
                 
               },
-              h4 {
+             .header {
                 color: white;
               }`}
         </style>
