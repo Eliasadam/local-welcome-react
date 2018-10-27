@@ -13,7 +13,7 @@ class CleaningUpWelcomePage extends Component {
   render() {
     
     return this.state.goToCleaningStep === true ? (
-      <RecipeSlides items={items}/>
+      <RecipeSlides items={items} mainStep={this.props.mainStep} setStepTo0={this.props.setStepTo0} setStepTo3={this.props.setStepTo3}/>
     ) : (
      
     <Col sm={{ size: 'auto', offset: 1 }}>

@@ -33,10 +33,10 @@ class App extends Component {
          <h2 className="head-title">
           Hello, we are Local Welcome
          </h2>
-          <p>
-           you are now ready to start the ritual eating event.
+          <p className="first-info">
+           You are now ready to start the ritual eating event.
           </p>
-          <p>
+          <p className="first-info">
             Please click on the button below to login
           </p>
            <Button color="success" onClick={this.toggle}>Login</Button>

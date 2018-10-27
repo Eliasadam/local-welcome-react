@@ -14,16 +14,17 @@ export default class DashboardPage extends Component {
   setStepTo1 = () => this.setState({ mainStep: 1 });
   setStepTo2 = () => this.setState({ mainStep: 2 });
   setStepTo3 = () => this.setState({ mainStep: 3 });
+  setStepTo0 = () => this.setState({ mainStep: 0 });
   currentComponent = step => {
     switch (this.state.mainStep) {
       case 1:
         return <TableSetup setStepTo2={this.setStepTo2}/>;
       case 2:
-        return <RecipePreparation setStepTo3={this.setStepTo3}/>;
+        return <RecipePreparation setStepTo3={this.setStepTo3}  mainStep={this.state.mainStep}/>;
       case 3:
-        return <CleaningUpWelcomePage />;
+        return <CleaningUpWelcomePage setStepTo0={this.setStepTo0} setStepTo3={this.setStepTo3}  mainStep={this.state.mainStep}/>;
       default:
-        return <h1> We are ready to get started ... Say something </h1>;
+        return <h1> You are ready to start the event </h1>;
     }
   };
   render() {
@@ -49,7 +50,7 @@ export default class DashboardPage extends Component {
           className={
             (this.state.mainStep === 2 ? 'active-class' : '') + ' dashboard mr-2 mt-2 mb-2'
           }
-         disabled={this.state.mainStep != 2}
+         disabled={this.state.mainStep < 2}
         >
           {' '}
           Recipe preparation {' '}

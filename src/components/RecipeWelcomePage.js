@@ -15,7 +15,7 @@ class RecipeWelcomePage extends Component {
     
 
     return this.state.goToRecipeStep === true ? (
-      <RecipeSlides items={this.props.slides} setStepTo3={this.props.setStepTo3}/>
+      <RecipeSlides items={this.props.slides} setStepTo3={this.props.setStepTo3} setStepTo0={this.props.setStepTo0} mainStep={this.props.mainStep}/>
     ) : (
       <div>
 

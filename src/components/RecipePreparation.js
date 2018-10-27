@@ -5,7 +5,7 @@ import item2 from '../data/tabboulehSlides.json';
 import item3 from '../data/potatoRostisSlides.json';
 
 import data from '../data/recipePreparation.json';
-import { Col, Row, CardImg } from 'reactstrap';
+import { Col, Row, CardImg ,Button} from 'reactstrap';
 
 class RecipePreparation extends Component {
   constructor(props) {
@@ -20,13 +20,14 @@ class RecipePreparation extends Component {
     const filteredValue = data.filter(item => item.id);
 
     return this.state.recipeSelected === true ? (
-      <RecipeWelcomePage slides={this.state.items} setStepTo3={this.props.setStepTo3} />
+      <RecipeWelcomePage slides={this.state.items} setStepTo3={this.props.setStepTo3} mainStep={this.props.mainStep} />
     ) : (
       <div>
         <Row className >
-        <Col sm={{ size: 'auto', offset: 1 }} className="list-item">
+        <Col sm={{ size: 'auto'}} className="list-item ml-3">
             <CardImg top width="100%" src={filteredValue[0].url} />
-            <button
+            <Button
+              className="item-list-view-btn"
               onClick={() =>
                 this.setState({
                   recipeSelected: true,
@@ -35,12 +36,13 @@ class RecipePreparation extends Component {
               }
             >
               {filteredValue[0].title}
-            </button>
+            </Button>
           </Col>
 
-          <Col sm={{ size: 'auto', offset: 1 }} className="list-item">
+          <Col sm={{ size: 'auto'}} className="list-item ml-3">
             <CardImg top width="100%" src={filteredValue[1].url} />
-            <button
+            <Button
+              className="item-list-view-btn"
               onClick={() =>
                 this.setState({
                   recipeSelected: true,
@@ -49,12 +51,13 @@ class RecipePreparation extends Component {
               }
             >
               {filteredValue[1].title}
-            </button>
+            </Button>
           </Col>
 
-          <Col sm={{ size: 'auto', offset: 1 }}  className="list-item">
+          <Col sm={{ size: 'auto'}}  className="list-item ml-2" >
             <CardImg top width="100%" src={filteredValue[2].url} />
-            <button
+            <Button
+             className="item-list-view-btn"
               onClick={() =>
                 this.setState({
                   recipeSelected: true,
@@ -63,7 +66,7 @@ class RecipePreparation extends Component {
               }
             >
               {filteredValue[2].title}
-            </button>
+            </Button>
           </Col>
         </Row>
       </div>
