@@ -11,7 +11,7 @@ import data from '../data/tableSetting.json';
 import TableSettingPagination from './TableSettingPagination.js';
 import Next from './Next.js';
 import Previous from './Previous.js';
-class TableSetup extends Component {
+class TableSetup2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -176,4 +176,4 @@ class TableSetup extends Component {
   }
 }
 
-export default TableSetup;
+export default TableSetup2;

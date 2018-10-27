@@ -39,7 +39,7 @@
 }
 button {
   display: inline;
-  margin: 2px;
+  margin: 0px;
 }
 .button-container {
   display: inline;
@@ -202,12 +202,22 @@ button {
 }
 
 .list-item{
-  width: 32%
+  width: 32%;
+  text-align: center;
+  padding: 5px auto;
+  margin: 5px auto;
 
+}
+@media only screen and (max-width:500px){
+  .list-item{
+    width: 100%;
+  }
 }
 .item-list-view-btn{
   width:100%;
   color:success;
+  margin: 5px auto;
+  padding: 3px;
 }
 .caption {
     width: 100%;

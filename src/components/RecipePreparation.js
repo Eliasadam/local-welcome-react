@@ -24,7 +24,7 @@ class RecipePreparation extends Component {
     ) : (
       <div>
         <Row className >
-        <Col sm={{ size: 'auto'}} className="list-item ml-3">
+        <Col sm={{ size: 'auto'}} className="list-item">
             <CardImg top width="100%" src={filteredValue[0].url} />
             <Button
               className="item-list-view-btn"
@@ -39,7 +39,7 @@ class RecipePreparation extends Component {
             </Button>
           </Col>
 
-          <Col sm={{ size: 'auto'}} className="list-item ml-3">
+          <Col sm={{ size: 'auto'}} className="list-item">
             <CardImg top width="100%" src={filteredValue[1].url} />
             <Button
               className="item-list-view-btn"
@@ -54,7 +54,7 @@ class RecipePreparation extends Component {
             </Button>
           </Col>
 
-          <Col sm={{ size: 'auto'}}  className="list-item ml-2" >
+          <Col sm={{ size: 'auto'}}  className="list-item" >
             <CardImg top width="100%" src={filteredValue[2].url} />
             <Button
              className="item-list-view-btn"
