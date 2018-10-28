@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RecipeSlides from './RecipeSlides';
-
+import {Button} from 'reactstrap';
 
 
 class RecipeWelcomePage extends Component {
@@ -30,7 +30,7 @@ class RecipeWelcomePage extends Component {
 <h4>On the table in front of you should be all you need to follow the recipe, including one big metal bowl for dirty utensils, and another for all the waste.</h4>
 
           
-            <button onClick={()=>this.setState({goToRecipeStep:true})}>Start</button>
+            <Button className="start-btn"  onClick={()=>this.setState({goToRecipeStep:true})}>Start</Button>
       </div>
     );
   }

@@ -51,6 +51,13 @@ button {
  }
 }
 
+/* welcome buttons */
+
+.start-btn{
+  width: 300px;
+  margin: 10px 0;
+  background-color: green;
+}
 
 /* carasoul and pagination style */
 

@@ -1,38 +1,20 @@
 [
   {  "id": 1,
-    "altText": " Peel and finely slice the red onion. Add to bowl.",
-    "caption": "Question 1: What is your favourite memory of the place you were born?"
+    "altText": "Step One: Once you have all finished your meal, clear the tables of all the cooking equipment (hopefully other members and guests will help you!) and carry it into the venue’s kitchen.",
+    "caption": ""
 
   },
   {  "id": 2,
-    "altText": "Step 2: Remove the seeds of the chilli into the waste tub, & finely slice. Add to bowl.",
-    "caption": "Question 2: What was your favourite meal ever, and why?"
+    "altText": "Step Two: Check that there is Washing up liquid and Tea Towels to hand! Wash up all the cooking and eating equipment that was used, paying particular attention on days where oil has been used in the recipe as it is easy for greasy residue to be undetected!",
+    "caption": ""
   },
-  { "id": 3,
-    "altText": "Step 3: Roughly chop the tomatoes and mix with onion and chilli in a bowl.",
-    "caption": "Question 3: What was the best thing that happened to you in the last week?"
+  {  "id": 3,
+    "altText": "Step Three: Before returning items to the boxes, ensure that all of the equipment is bone dry and grease-residue free, especially on equipment that is stacked for storage, such as plastic cups. This prevents the next group from having to re-wash equipment before their meal!",
+    "caption": ""
   },
   {  "id": 4,
-    "altText": "Step 4: Step 4: Drain the chickpeas into the waste tub, mash about 10% of them & mix in.",
-    "caption": "Question 4: What are you are looking forward to next week?"
-  },
-  { "id": 5,
-    
-    "altText": "Step 5: Chop the mint & rip the basil, add to bowl.",
-    "caption": "Question 5: What are your strengths now, and is there one strength or skill you'd like to develop in the next year?"
-  },
-  { "id": 6,
-    "altText": "Step 6: Squeeze the lemon juice into the bowl, along with 3 tbsp olive oil, and salt & pepper to taste.",
-    "caption": "Question 6: In the next month, how will you use your strengths and start learning a new skill?"
-    
-  }, 
-  { "id": 7,
-    "altText": "Step 7: Place the bowl’s contents onto serving dishes, and finish by crumbling the feta over the top. When the salad is ready, please take the bowls into the next room to share. While we wait, please can one pair clean the table while the rest of us wash and dry the kit to go back in the box for next time. Thanks!",
-
-    "caption": "Question 7: In the next 2 weeks, would you like any help or encouragement using your strengths to develop new skills?"
-  }, 
-  {  "id": 8,
-    "altText": "Final Step: When everything is cleaned up and back in the box, you're ready to enjoy your meal / ride your bike etc).",
-    "caption": "Thanks for leading the table assigned to you!"
+    "altText": "Step Four: Ensure that the boxes are packed with an even amount of equipment per box (aside from soup-making boxes where the equipment differs). This allows other Table Leaders greater ease and less hassle if they’re transferring boxes to a different venue for other events. Follow the link below for an extensive list of equipment that belongs in each box.",
+    "caption": ""
   }
+  
 ]

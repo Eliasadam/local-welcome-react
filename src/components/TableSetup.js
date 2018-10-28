@@ -108,7 +108,7 @@ class TableSetup extends Component {
            <h3 className="caption">{item.title}</h3>
            <img src={item.url} alt={item.title} className="picture" />
          
-          <CarouselCaption captionText={item.title} captionHeader={item.title} />
+          {/* <CarouselCaption captionText={item.title} captionHeader={item.title} /> */}
         </CarouselItem>
       );
     });
