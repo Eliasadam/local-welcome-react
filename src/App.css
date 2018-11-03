@@ -58,7 +58,9 @@ button {
   margin: 10px 0;
   background-color: green;
 }
-
+.welcomeWrapper{
+  padding: 20px;
+}
 /* carasoul and pagination style */
 
 .middle {
@@ -119,7 +121,8 @@ button {
 
  .carousel-info-container{
   height:48vh;
-  padding: 10% 0;
+  padding: 5%;
+  margin-top: 20px;
   text-align: center;
  
 } 
@@ -234,21 +237,22 @@ button {
      padding-top:30px;
      opacity: 0; filter: alpha(opacity=0);
      animation-name: caption;
-     animation-duration: 4s;
-     animation-delay: 1s;
+     animation-duration: 1s;
+     animation-delay: 0.5s;
      animation-timing-function: ease-in;
      animation-fill-mode: forwards;
      -webkit-animation-name: caption;
-     -webkit-animation-duration: 3s;
-     -webkit-animation-delay: 1s;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-delay: 0.5s;
      -webkit-animation-timing-function: ease-in;
      -webkit-animation-fill-mode: forwards;
 } 
 
+
 @media only screen and (max-width: 1024px) {
   .carousel-info-container{
    
-    padding: 20% 0;
+    padding: 10px 0;
     text-align: center;
    
   } 
@@ -270,6 +274,8 @@ button {
     from {opacity: 0.5; filter: alpha(opacity=50); }
    to {opacity: 1; filter: alpha(opacity=100); }
 } */
+
+
 /* login form style  */
 
 .formWrapper {

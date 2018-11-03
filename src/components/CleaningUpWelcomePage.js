@@ -20,7 +20,7 @@ class CleaningUpWelcomePage extends Component {
       />
     ) : (
       <Col sm={{ size: 'auto'}}>
-        <div style={{ textAlign: 'center' }}>
+        <div className="welcomeWrapper" style={{ textAlign: 'center' }}>
           <h1>Ready to clean up?</h1>
           <h2>Follow these instructions to find out how.</h2>
 

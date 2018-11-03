@@ -88,8 +88,9 @@ class RecipeSlides extends Component {
          
         >
         <div className="carousel-info-container">
-          <h4>{item.caption}</h4>
           <h4>{item.altText}</h4>
+            <br/>
+          <h4>{item.caption}</h4>
         </div>
 
         </CarouselItem>
