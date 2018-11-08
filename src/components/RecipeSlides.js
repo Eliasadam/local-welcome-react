@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import {
   Col,
@@ -79,16 +79,18 @@ class RecipeSlides extends Component {
   const slides = this.props.items.map(item => {
       return (
         <CarouselItem
-          className="custom-tag"
+          className="carousel-inner item"
           tag="div"
           key={item.id}
           onExiting={this.onExiting}
           onExited={this.onExited}
+        
          
         >
-        <div className="header">
-        <h4>{item.caption}</h4>
-        <h4>{item.altText}</h4>
+        <div className="carousel-info-container">
+          <h4>{item.altText}</h4>
+            <br/>
+          <h4>{item.caption}</h4>
         </div>
 
         </CarouselItem>
@@ -97,18 +99,8 @@ class RecipeSlides extends Component {
 
     return (
       <div>
-        <style>
-          {`.custom-tag {
-                max-width: 100%;
-                height: 530px;
-                background: #8ac43f;
-                
-              },
-             .header {
-                color: white;
-              }`}
-        </style>
-        <Col sm={{ size: 'auto', offset: 1 }}>
+      
+        <Col sm={{ size: 'auto'}}>
         <Carousel
           activeIndex={activeIndex}
           next={this.next}
@@ -125,6 +117,7 @@ class RecipeSlides extends Component {
             direction="prev"
             directionText="Previous"
             onClickHandler={this.previous}
+            
           />
           <CarouselControl
             direction="next"
@@ -133,13 +126,24 @@ class RecipeSlides extends Component {
           />
         </Carousel>
         <Modal isOpen={this.state.modal} handleModal={this.handleModal} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle} className="head-title">Modal title</ModalHeader>
           <ModalBody>
-            <h1> Thank you for leading the table. You have completed the task successfully</h1>
-            <h1>Please go to the next next</h1>
+            {this.props.mainStep == 2?
+            <Fragment>
+              <h1> Thank you for leading the table. You have completed the task successfully</h1>
+              <h1>Please go to the next stage</h1>
+            </Fragment>
+            :
+            <Fragment>
+              <h1> You have now finished the event  successfully</h1>
+              <h1>Please go dashboard</h1>
+            </Fragment>
+            
+           }
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.props.setStepTo3}>Do Something</Button>{' '}
+            {console.log(this.props.setStepTo0)}
+            <Button color="primary" onClick={this.props.mainStep == 2 ? this.props.setStepTo3 : this.props.setStepTo0}>Next</Button>{' '}
           </ModalFooter>
         </Modal>
         </Col>

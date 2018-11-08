@@ -1,12 +1,14 @@
 * { 
   font-style:Sans-serif;
   font-weight:bold;
+ 
 }
 .App {
   text-align: center;
   min-height:60vh;
-  padding-top:5rem;
+  padding:5rem;
 }
+
 #root {
   width: 100%;
   text-align: center;
@@ -37,15 +39,28 @@
 }
 button {
   display: inline;
-  margin: 2px;
+  margin: 0px;
 }
 .button-container {
   display: inline;
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 700px) {
+.App {
+  font-size: 3rem;
+ }
+}
 
+/* welcome buttons */
 
-
+.start-btn{
+  width: 300px;
+  margin: 10px 0;
+  background-color: green;
+}
+.welcomeWrapper{
+  padding: 20px;
+}
 /* carasoul and pagination style */
 
 .middle {
@@ -54,6 +69,9 @@ button {
 }
 .carousel-wrapper {
   position: relative;
+}
+.carousel-inner .item{
+  backface-visibility: hidden;
 }
 .picture {
   display: inline-block;
@@ -71,6 +89,43 @@ button {
   white-space: nowrap;
   transition: all 0.5s ease-in-out;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+ height: 100px;
+ width: 100px;
+ background-size: 100%, 100%;
+ background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+ content: '>';
+ font-size: 55px;
+ color:#8ac43f;
+}
+
+.carousel-control-prev-icon:after {
+ content: '<';
+ font-size: 55px;
+ color:#8ac43f
+}
+.carousel-indicators li {
+  content: '-';
+  font-size: 30px;
+  background-color: #8ac43f
+}
+.carousel-indicators li.active{
+  background-color: green;
+}
+
+ .carousel-info-container{
+  height:48vh;
+  padding: 5%;
+  margin-top: 20px;
+  text-align: center;
+ 
+} 
 .next-button {
   width: 100%;
   z-index: 999;
@@ -157,29 +212,57 @@ button {
 }
 
 .list-item{
-  width: 25%
+  width: 32%;
+  text-align: center;
+  padding: 5px auto;
+  margin: 5px auto;
+
+}
+@media only screen and (max-width:500px){
+  .list-item{
+    width: 100%;
+  }
+}
+.item-list-view-btn{
+  width:100%;
+  color:success;
+  margin: 5px auto;
+  padding: 3px;
 }
 .caption {
-    width: 500px;
+    width: 100%;
     height: 80px;
      position: relative;
-     opacity:0;
-      transition: all 1000ms ease-out 600ms;
-}
-
-
-   /* opacity:0;
-   filter:alpha(opacity=0);
-   
-    animation-name: caption;
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-timing-function: ease;
+     text-align: center;
+     padding-top:30px;
+     opacity: 0; filter: alpha(opacity=0);
+     animation-name: caption;
+     animation-duration: 1s;
+     animation-delay: 0.5s;
+     animation-timing-function: ease-in;
+     animation-fill-mode: forwards;
      -webkit-animation-name: caption;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-delay: 1s;
-    -webkit-animation-timing-function: ease;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-delay: 0.5s;
+     -webkit-animation-timing-function: ease-in;
+     -webkit-animation-fill-mode: forwards;
+} 
+
+
+@media only screen and (max-width: 1024px) {
+  .carousel-info-container{
+   
+    padding: 10px 0;
+    text-align: center;
+   
+  } 
 }
+@media only screen and (max-width: 500px){
+  .caption{
+    font-size: 1rem;
+  }
+}
+
 
 @keyframes caption {
   
@@ -191,6 +274,8 @@ button {
     from {opacity: 0.5; filter: alpha(opacity=50); }
    to {opacity: 1; filter: alpha(opacity=100); }
 } */
+
+
 /* login form style  */
 
 .formWrapper {

@@ -36,7 +36,7 @@ const LoginForm = props => (
         <Field
           type="password"
           name="password"
-          placeholder="password"
+          placeholder="Password"
           onBlur={props.handleBlur}
           className={
             props.touched.password && props.errors.password

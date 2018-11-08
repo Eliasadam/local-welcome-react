@@ -103,11 +103,12 @@ class TableSetup extends Component {
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.url}
+          className="carousel-inner item"
         >
            <h3 className="caption">{item.title}</h3>
-          <img src={item.url} alt={item.title} className="picture" />
+           <img src={item.url} alt={item.title} className="picture" />
          
-          <CarouselCaption captionText={item.title} captionHeader={item.title} />
+          {/* <CarouselCaption captionText={item.title} captionHeader={item.title} /> */}
         </CarouselItem>
       );
     });
@@ -139,16 +140,16 @@ class TableSetup extends Component {
               <ModalBody>
                 
                   {' '}
-                  <h3 className="head-title">Welcome to Cook and Eat Ritual! </h3>
+               
                   <h1>
                     <p>You have completed this stage successfully.</p>
-                    <p>you are now ready to move to the recipe preperation stage.</p>
+                    <p>You are now ready to move to the recipe preperation stage.</p>
                   </h1> 
               
               </ModalBody>
                <ModalFooter>
                 <Button color="primary" onClick={this.props.setStepTo2}>
-                  Next Stage
+                  Next 
                 </Button>{' '}
                 
               </ModalFooter>
