@@ -1,15 +1,15 @@
 {
-  "main.css": "/local-welcome/static/css/main.892d849a.chunk.css",
-  "main.js": "/local-welcome/static/js/main.f01f9f43.chunk.js",
-  "main.js.map": "/local-welcome/static/js/main.f01f9f43.chunk.js.map",
-  "static/css/1.ab0914ce.chunk.css": "/local-welcome/static/css/1.ab0914ce.chunk.css",
-  "static/js/1.6f3e72e2.chunk.js": "/local-welcome/static/js/1.6f3e72e2.chunk.js",
-  "static/js/1.6f3e72e2.chunk.js.map": "/local-welcome/static/js/1.6f3e72e2.chunk.js.map",
-  "runtime~main.js": "/local-welcome/static/js/runtime~main.2613f732.js",
-  "runtime~main.js.map": "/local-welcome/static/js/runtime~main.2613f732.js.map",
-  "static/css/1.ab0914ce.chunk.css.map": "/local-welcome/static/css/1.ab0914ce.chunk.css.map",
-  "static/css/main.892d849a.chunk.css.map": "/local-welcome/static/css/main.892d849a.chunk.css.map",
-  "index.html": "/local-welcome/index.html",
-  "precache-manifest.ab619c2127cc9588d4b36ed99654c9ae.js": "/local-welcome/precache-manifest.ab619c2127cc9588d4b36ed99654c9ae.js",
-  "service-worker.js": "/local-welcome/service-worker.js"
+  "main.css": "/local-welcome-react/static/css/main.892d849a.chunk.css",
+  "main.js": "/local-welcome-react/static/js/main.00f7bdf1.chunk.js",
+  "main.js.map": "/local-welcome-react/static/js/main.00f7bdf1.chunk.js.map",
+  "static/css/1.ab0914ce.chunk.css": "/local-welcome-react/static/css/1.ab0914ce.chunk.css",
+  "static/js/1.6f3e72e2.chunk.js": "/local-welcome-react/static/js/1.6f3e72e2.chunk.js",
+  "static/js/1.6f3e72e2.chunk.js.map": "/local-welcome-react/static/js/1.6f3e72e2.chunk.js.map",
+  "runtime~main.js": "/local-welcome-react/static/js/runtime~main.af97caf3.js",
+  "runtime~main.js.map": "/local-welcome-react/static/js/runtime~main.af97caf3.js.map",
+  "static/css/main.892d849a.chunk.css.map": "/local-welcome-react/static/css/main.892d849a.chunk.css.map",
+  "static/css/1.ab0914ce.chunk.css.map": "/local-welcome-react/static/css/1.ab0914ce.chunk.css.map",
+  "index.html": "/local-welcome-react/index.html",
+  "precache-manifest.95d4b9cf33207054291709e2ef5a9c64.js": "/local-welcome-react/precache-manifest.95d4b9cf33207054291709e2ef5a9c64.js",
+  "service-worker.js": "/local-welcome-react/service-worker.js"
 }
